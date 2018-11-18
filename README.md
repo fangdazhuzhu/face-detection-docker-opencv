@@ -8,3 +8,8 @@
 # You need to download the yml folder and put it under the current folder
 link：https://pan.baidu.com/s/1hrE3QDf6vJWtMlKrmODOgg 
 password：5zho 
+
+# command：python UI.py
+# process
+> 
+
