@@ -9,7 +9,7 @@ import os
 import cv2
 import pickle,getpass
 global date_path
-data_path="~/FaceRecognizer-master (4)/faceRecogination/dataSet/"
+data_path="~/face-detection-docker-opencv/dataSet/"
 global count_cap,cap
 count_cap=1
 
@@ -21,14 +21,14 @@ class Login(QDialog):
         self.pushButtonOK.clicked.connect(self.slotLogin)
         self.pushButtonCancle.clicked.connect(self.signUp)
         self.lineEditPasswd.setEchoMode(QLineEdit.Password)
-        #self.label_img.setPixmap(QPixmap('../图/2.jpg'))
+        #self.label_img.setPixmap(QPixmap('./图/2.jpg'))
         #self.pushButton.setStyleSheet('QPushButton{border-image:url(22.png)}')
-        self.ncImage=QImage('../图/2.jpg')
+        self.ncImage=QImage('./图/2.jpg')
         self.label_img.setPixmap(QPixmap.fromImage(self.ncImage).scaled(self.label_img.size(),Qt.KeepAspectRatio,Qt.SmoothTransformation))
         self.setWindowTitle('Icon')
-        self.setWindowIcon(QIcon('../图/3.jpg'))
+        self.setWindowIcon(QIcon('./图/3.jpg'))
         palette1 = QPalette()
-        palette1.setBrush(self.backgroundRole(), QBrush(QPixmap('../图/1.jpg')))   # 设置背景图片
+        palette1.setBrush(self.backgroundRole(), QBrush(QPixmap('./图/1.jpg')))   # 设置背景图片
         self.setPalette(palette1)
         #self.setWindowFlags(Qt.WindowMinMaxButtonsHint)#######允许窗体最大最小化
 
@@ -101,8 +101,8 @@ class _classfication(QDialog):
         self.pushButton_cv.clicked.connect(self.login_cv)
         #cvMap = QPixmap("../图/cv.jpg").scaled(self.label.width(),self.label.height())
         #self.pushButton_cv.setPixmap(cvMap)
-        self.pushButton_cv.setStyleSheet('QPushButton{border-image:url(../图/cv.jpg)}')
-        self.pushButton_keras.setStyleSheet('QPushButton{border-image:url(../图/keras.jpg)}')
+        self.pushButton_cv.setStyleSheet('QPushButton{border-image:url(./图/cv.jpg)}')
+        self.pushButton_keras.setStyleSheet('QPushButton{border-image:url(./图/keras.jpg)}')
         self.pushButton_keras.clicked.connect(self.login_keras)
 
     def login_cv(self):
@@ -115,7 +115,7 @@ class _classfication(QDialog):
         self.l_keras=Face_keras()
         self.l_keras.show()
 
-sys.path.append('~/FaceRecognizer-master (4)/faceRecogination/')
+sys.path.append('~/face-detection-docker-opencv/')
 from Name import name
 import datasetCreator
 import create
@@ -170,9 +170,9 @@ class Face_keras(QDialog):
         super(Face_keras,self).__init__()
         loadUi('face_keras.ui',self)
         self.pushButton_exit.clicked.connect(self.logoutEvent)
-        self.setWindowIcon(QIcon('../图/3.jpg'))
+        self.setWindowIcon(QIcon('./图/3.jpg'))
         palette1 = QPalette()
-        palette1.setBrush(self.backgroundRole(), QBrush(QPixmap('../图/1.jpg')))    
+        palette1.setBrush(self.backgroundRole(), QBrush(QPixmap('./图/1.jpg')))    
         self.setPalette(palette1)
 
 
@@ -199,7 +199,7 @@ class Face_cv(QDialog):
         super(Face_cv,self).__init__()
         loadUi('Face.ui',self)
         self.pushButtonInput.clicked.connect(self.showDialog)
-        self.pushButtonDet.setStyleSheet('QPushButton{border-image:url(../图/2.jpg)}')
+        self.pushButtonDet.setStyleSheet('QPushButton{border-image:url(./图/2.jpg)}')
         #self.pushButtonInput.clicked.connect(self.cap_)
         self.pushButtonSql.clicked.connect(self.showmySql)
         self.pushButtonExit.clicked.connect(self.logoutEvent)
@@ -208,7 +208,7 @@ class Face_cv(QDialog):
         self.label_camera.setPixmap(QPixmap('../图/2.jpg'))
         self.setWindowIcon(QIcon('../图/3.jpg'))
         palette1 = QPalette()
-        palette1.setBrush(self.backgroundRole(), QBrush(QPixmap('../图/8.jpg')))   # 设置背景图片
+        palette1.setBrush(self.backgroundRole(), QBrush(QPixmap('./图/8.jpg')))   # 设置背景图片
         self.setPalette(palette1)
         self.timer = QTimer()
         self.timer.start()
