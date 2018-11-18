@@ -9,7 +9,10 @@
 link：https://pan.baidu.com/s/1hrE3QDf6vJWtMlKrmODOgg 
 password：5zho 
 
-# command：python UI.py
 # process
-> 
+command：python UI.py
+1.sign up and log in
+2.choose CV mode
+3.
+
 
