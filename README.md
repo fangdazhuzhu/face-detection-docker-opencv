@@ -16,5 +16,8 @@
     4.click the reload, input the face information
     5.click the mysqp, open the folder
     
+## process_image
+    Image of the code run results
+    
 
 
