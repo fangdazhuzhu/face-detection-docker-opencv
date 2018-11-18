@@ -13,6 +13,9 @@
     command：python UI.py
     1.sign up and log in
     2.choose CV mode
-    3.
+    3.click the capture first, go into the detection mode
+    4.click the reload, input the face information
+    5.click the mysqp, open the folder
+    
 
 
